@@ -32,8 +32,10 @@ function SearchPage() {
 
         // Anilist anime
         const animeRes = await searchAnime(debouncedQuery);
-        const animeData = normalizeList(animeRes, "anime");
-
+        const filteredAnime = animeRes.filter(
+            (item) => !item.genres?.includes("Ecchi") && !item.genres?.includes("Hentai")
+        );
+        const animeData = normalizeList(filteredAnime, "anime");
         const merged = [...tmdbData, ...animeData];
 
         setResults(merged);
@@ -55,7 +57,7 @@ function SearchPage() {
         placeholder="Search movies, TV shows, anime..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="w-full p-3 rounded-lg bg-gray-900 text-white outline-none mb-6"
+        className="w-full p-3 rounded-lg text-white outline-none mb-6 backdrop-blur-2xl"
       />
       {error && <p className="text-red-500">{error}</p>}
 

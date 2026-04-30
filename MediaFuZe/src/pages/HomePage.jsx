@@ -25,7 +25,10 @@ function HomePage() {
 
     // Anime
     getTrendingAnime().then(data => {
-      const normalized = normalizeList(data, "anime");
+      const filteredAnime = data.filter(
+    (item) => !item.genres?.includes("Ecchi") && !item.genres?.includes("Hentai")
+      );
+      const normalized = normalizeList(filteredAnime, "anime");
       setAnime(normalized);
     });
   }, []);
@@ -49,7 +52,7 @@ function HomePage() {
         {/* TV Shows Section */}
       <section>
           <h1 className="text-2xl font-bold mb-4">Trending TV Shows</h1>
-          <div className="flex gap-4 overflow-x-auto no-scrollbar px-2">
+          <div className="flex gap-4 overflow-x-auto overflow-y-hidden no-scrollbar scroll-smooth px-2">
             {tvShows.map((item) => (
               <div 
                 key={`${item.id}-${item.type}`}

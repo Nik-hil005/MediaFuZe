@@ -18,6 +18,7 @@ export const searchAnime = async (search) => {
         large
         }
         averageScore
+        genres
       }
     }
   }
@@ -44,6 +45,7 @@ export const getTrendingAnime = async () => {
           large
         }
         averageScore
+        genres
       }
     }
   }

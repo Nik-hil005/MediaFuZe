@@ -30,3 +30,8 @@ export const getDetails = async (type, id) => {
   const res = await tmdb.get(`/${type}/${id}`);
   return res.data;
 };
+
+export const getWatchProviders = async (type, id) => {
+  const res = await tmdb.get(`/${type}/${id}/watch/providers`);
+  return res.data;
+}

@@ -14,7 +14,7 @@ export const getTrendingMovies = async () => {
   return res.data;
 };
 
-export const getTrendingTV = async () => {
+export const getTrendingTVShows = async () => {
   const res = await tmdb.get("/trending/tv/week");
   return res.data;
 };

@@ -14,3 +14,11 @@
 .no-scrollbar {
     scrollbar-width: none;
 }
+
+body {
+  background-image: url("../src/assets/background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

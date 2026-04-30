@@ -1,23 +1,26 @@
-// import { useState } from 'react'
 import { Routes, Route } from "react-router-dom"
-import HomePage from "./pages/HomePage"
-import SearchPage from "./pages/SearchPage"
-import Watchlist from "./pages/Watchlist"
-import Details from "./pages/Details"
+import { Suspense, lazy } from "react"
 import Navbar from "./components/Navbar"
-// import './App.css'
+
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const SearchPage = lazy(() => import("./pages/SearchPage"));
+const Watchlist = lazy(() => import("./pages/Watchlist"));
+const Details = lazy(() => import("./pages/Details"));
 
 function App() {
   return (
     <> 
     <div >
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/watchlist" element={<Watchlist />} />
-        <Route path="/details/:type/:id" element={<Details />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/details/:type/:id" element={<Details />} />
+        </Routes>
+      </Suspense>
     </div>
     </>
   );

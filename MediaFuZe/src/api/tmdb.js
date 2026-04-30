@@ -34,4 +34,9 @@ export const getDetails = async (type, id) => {
 export const getWatchProviders = async (type, id) => {
   const res = await tmdb.get(`/${type}/${id}/watch/providers`);
   return res.data;
-}
+};
+
+export const getVideo = async (type, id) => {
+  const res = await tmdb.get(`/${type}/${id}/videos`);
+  return res.data;
+}; 

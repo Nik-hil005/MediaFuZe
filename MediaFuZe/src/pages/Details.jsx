@@ -301,7 +301,7 @@ function Details() {
               </div>
             </div>
           ) : (
-            <p className="text-gray-400 mt-6">No trailer available.</p>
+            <p className="text-white mt-6">No trailer available.</p>
           )}
         </div>
       </div>

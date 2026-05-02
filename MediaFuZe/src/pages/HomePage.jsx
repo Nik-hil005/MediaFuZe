@@ -38,7 +38,7 @@ function HomePage() {
 
       {/* Movies Section */}
       <section>
-        <h1 className="text-2xl font-bold mb-4">Trending Movies</h1>
+        <h1 className="text-2xl text-white font-bold mb-4">Trending Movies</h1>
 
         <div className="flex gap-4 overflow-x-auto h-[360px] no-scrollbar scroll-smooth px-2">
           {movies.map(movie => (
@@ -51,7 +51,7 @@ function HomePage() {
 
         {/* TV Shows Section */}
       <section>
-          <h1 className="text-2xl font-bold mb-4">Trending TV Shows</h1>
+          <h1 className="text-2xl text-white font-bold mb-4">Trending TV Shows</h1>
           <div className="flex gap-4 overflow-x-auto overflow-y-hidden no-scrollbar scroll-smooth px-2">
             {tvShows.map((item) => (
               <div 
@@ -66,7 +66,7 @@ function HomePage() {
 
         {/* Anime Section */}   
       <section>
-        <h1 className="text-2xl font-bold mb-4">Trending Anime</h1>
+        <h1 className="text-2xl text-white font-bold mb-4">Trending Anime</h1>
 
         <div className="flex gap-4 overflow-x-auto h-[360px] no-scrollbar scroll-smooth px-2">
           {anime.map(item => (

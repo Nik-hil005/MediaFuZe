@@ -74,7 +74,7 @@ function HomePage() {
           {anime.map((item) => (
             <div
               key={item.id}
-              className="min-w-[40] min-h-[60] max-h-[60] max-w[160px] flex shrink-0"
+              className="min-w-[160px] min-h-[240px] max-h-[240px] max-w-[160px] flex shrink-0"
             >
               <Card item={item} />
             </div>

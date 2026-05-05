@@ -44,7 +44,7 @@ function HomePage() {
           {movies.map((movie) => (
             <div
               key={movie.id}
-              className="min-w-[160px] min-h-[240px] max-h-[240px] max-w-[160px] flex shrink-0"
+              className="min-w-[160px] max-w-[160px] min-h-[320px] max-h-[320px] flex shrink-0"
             >
               <Card item={movie} />
             </div>

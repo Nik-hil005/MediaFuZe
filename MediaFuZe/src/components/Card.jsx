@@ -16,7 +16,7 @@ function Card({ item }) {
       </button>
 
     <Link to={`/details/${item.type}/${item.id}`}>
-      <div className="bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition-transform hover:shadow-lg hover:shadow-black/50 duration-300 cursor-pointer w-full h-80">
+      <div className="bg-gradient-to-r from-fuchsia-900 to-pink-700 rounded-xl overflow-hidden hover:scale-105 transition-transform hover:shadow-lg hover:shadow-black/50 duration-300 cursor-pointer w-full h-80">
         
         {/* Fixed image container */}
         <div className="w-40 h-60 bg-gray-800">

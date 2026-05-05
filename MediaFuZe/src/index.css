@@ -24,3 +24,7 @@ body {
   background-attachment: fixed;
   color: white;
 }
+
+.card-gradd {
+  background: linear-gradient(to right, oklch(29.3% 0.136 325.661), oklch(52.5% 0.223 3.958));
+}

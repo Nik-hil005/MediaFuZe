@@ -13,12 +13,12 @@ function SearchPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!debouncedQuery) {
-      setResults([]);
-      return;
-    }
-
+    
     const fetchData = async () => {
+      if (!debouncedQuery) {
+        setResults([]);
+        return;
+      }
       setLoading(true);
       try {
         setError(null);
@@ -57,7 +57,7 @@ function SearchPage() {
         placeholder="Search movies, TV shows, anime..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="w-full p-3 rounded-lg text-white outline-none mb-6 backdrop-blur-2xl"
+        className="w-full p-3 rounded-lg text-white outline-none mb-6 bg-purple-400/40 backdrop-blur-xl"
       />
       {error && <p className="text-red-500">{error}</p>}
 
@@ -70,21 +70,21 @@ function SearchPage() {
           {query ? (
             <>
               <p className="text-lg text-center mt-10 text-gray-400 animate-fade-in">🔍 No results found</p>
-              <p className="text-sm mt-2 text-center mt-10 text-gray-400 animate-fade-in">
+              <p className="text-sm mt-10 text-center text-gray-400 animate-fade-in">
                 Try a different keyword or spelling.
               </p>
             </>
           ) : (
             <>
               <p className="text-lg text-center mt-10 text-gray-400 animate-fade-in">Start searching 🎬</p>
-              <p className="text-sm mt-2 text-center mt-10 text-gray-400 animate-fade-in">
+              <p className="text-sm text-center mt-10 text-gray-400 animate-fade-in">
                 Movies, TV shows, anime—all in one place.
               </p>
             </>
           )}
         </div>
       ) : (
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 justify-center">
           {results.map((item) => (
             <Card key={`${item.id}-${item.type}`} item={item} />
           ))}

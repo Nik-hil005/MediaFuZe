@@ -257,7 +257,7 @@ function Details() {
         <img
           src={data.image}
           alt={data.title}
-          className="max-h-80 md:w-[300px] rounded-lg"
+          className="max-h-80 md:w-75 rounded-lg"
         />
 
         <div>

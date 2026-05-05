@@ -17,6 +17,7 @@
 
 body {
   background-image: url("../src/assets/background-img.webp");
+  /* background: linear-gradient(to top right, rgb(148, 21, 187), rgb(40, 147, 234)); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

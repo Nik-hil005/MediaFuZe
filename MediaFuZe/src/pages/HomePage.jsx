@@ -44,7 +44,7 @@ function HomePage() {
           {movies.map((movie) => (
             <div
               key={movie.id}
-              className="min-w-[40] min-h-[60] max-h-[60] max-w[160px] flex shrink-0"
+              className="min-w-[160px] min-h-[240px] max-h-[240px] max-w-[160px] flex shrink-0"
             >
               <Card item={movie} />
             </div>
@@ -70,7 +70,7 @@ function HomePage() {
       <section>
         <h1 className="text-2xl text-white font-bold mb-4">Trending Anime</h1>
 
-        <div className="flex gap-4 overflow-x-auto h-90 no-scrollbar scroll-smooth px-2">
+        <div className="flex gap-4 overflow-x-auto h-[360px] no-scrollbar scroll-smooth px-2">
           {anime.map((item) => (
             <div
               key={item.id}

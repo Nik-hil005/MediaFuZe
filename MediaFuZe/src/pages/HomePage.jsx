@@ -40,7 +40,7 @@ function HomePage() {
       <section>
         <h1 className="text-2xl text-white font-bold mb-4">Trending Movies</h1>
 
-        <div className="flex gap-4 overflow-x-auto 0 no-scrollbar scroll-smooth px-2">
+        <div className="flex gap-4 overflow-x-auto overflow-y-hidden 0 no-scrollbar scroll-smooth px-2">
           {movies.map((movie) => (
             <div
               key={movie.id}
